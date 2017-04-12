@@ -15,9 +15,9 @@ J = 0;
 
 prediction = X * theta;
 
-squareError = (prediction - y).^2;
+squareError = (prediction - y)'*(prediction - y);
 
-J = J + 1/(2*m) * sum(squareError)
+J = J + 1/(2*m) * squareError
 
 % =========================================================================
 

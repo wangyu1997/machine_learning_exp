@@ -18,7 +18,7 @@ for iter = 1:num_iters
     %
 
     prediction = X'*(X*theta-y);
-    theta = theta - alpha*1/(m)*sum(prediction,2);
+    theta = theta - alpha*1/(m)*prediction;
 
     % ============================================================
 
